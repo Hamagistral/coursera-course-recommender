@@ -1,0 +1,27 @@
+{
+  "variant_a": {
+    "model_name": "all-MiniLM-L6-v2",
+    "num_courses": 6089,
+    "embedding_dim": 384,
+    "metrics": {
+      "diversity": 0.008,
+      "coverage": 0.076,
+      "avg_similarity": 0.6412,
+      "inference_time_ms": 13.07
+    },
+    "mlflow_run_id": "c3c17680526b49a1a68c9f3d758ebcbe"
+  },
+  "variant_b": {
+    "model_name": "all-mpnet-base-v2",
+    "num_courses": 6089,
+    "embedding_dim": 768,
+    "metrics": {
+      "diversity": 0.008,
+      "coverage": 0.079,
+      "avg_similarity": 0.6795,
+      "inference_time_ms": 19.2
+    },
+    "mlflow_run_id": "14af2555dec741bc8cf38f439e374198"
+  },
+  "winner": "B"
+}

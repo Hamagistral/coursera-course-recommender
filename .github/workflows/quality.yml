@@ -1,0 +1,37 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Install dev dependencies
+        run: uv pip install -e ".[dev]" --system
+
+      - name: Check formatting (Black)
+        run: black --check src/ tests/ app.py scripts/train_models.py
+
+      - name: Check imports (isort)
+        run: isort --check-only src/ tests/ app.py scripts/train_models.py
+
+      - name: Lint (Ruff)
+        run: ruff check src/ tests/ app.py scripts/train_models.py
+
+      - name: Type check (mypy)
+        run: mypy src/ --ignore-missing-imports
