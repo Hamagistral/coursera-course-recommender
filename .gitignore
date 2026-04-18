@@ -22,8 +22,7 @@ data/processed/*.npy
 # Keep cleaned CSV in git if small enough
 # data/processed/courses_clean.csv
 
-# Model files (large binaries)
-models/*.pkl
+# Model files
 models/*.bin
 data/processed/embeddings_*.npy
 

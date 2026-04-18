@@ -211,7 +211,7 @@ uv run mypy src/                         # type check
 3. **New app** → select repo → branch `main` → main file `app.py`
 4. Deploy — Streamlit Cloud installs `requirements.txt` automatically
 
-> **Note:** The `.pkl` model files are large (~90 MB for Variant A, ~420 MB for Variant B). Consider committing only Variant A for Streamlit Cloud, or using Git LFS.
+> **Note:** Model files are ~14 MB (Variant A) and ~24 MB (Variant B) — small enough to commit directly to the repo.
 
 ---
 

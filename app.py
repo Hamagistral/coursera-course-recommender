@@ -113,7 +113,7 @@ MODEL_INFO = {
             "- **Architecture:** MiniLM (distilled BERT)",
             "- **Embedding dim:** 384",
             "- **Speed:** ~5× faster than MPNet",
-            "- **Model size:** ~90 MB"
+            "- **Model size:** ~14 MB"
         ],
         "model_path": os.path.join(MODELS_DIR, "recommender_variant_a.pkl"),
     },
@@ -124,7 +124,7 @@ MODEL_INFO = {
             "- **Architecture:** MPNet (full-size transformer)",
             "- **Embedding dim:** 768",
             "- **Accuracy:** +8% avg similarity vs MiniLM",
-            "- **Model size:** ~420 MB"
+            "- **Model size:** ~24 MB"
         ],
         "model_path": os.path.join(MODELS_DIR, "recommender_variant_b.pkl"),
     },
