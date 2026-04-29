@@ -19,20 +19,19 @@ Testing         pytest · pytest-cov
 CI/CD           GitHub Actions
 ```
 
-|---|---|
-| **Deep Learning / NLP** | BERT sentence embeddings via `sentence-transformers` for semantic similarity |
-| **Recommender System** | Content-based filtering using cosine similarity on 6 000+ courses |
-| **MLOps** | MLflow experiment tracking — params, metrics, artifacts logged per run |
-| **A/B Testing** | Two embedding models compared (`all-MiniLM-L6-v2` vs `all-mpnet-base-v2`) |
-| **Data Engineering** | Full EDA → cleaning → feature engineering pipeline on raw Coursera data |
-| **Software Engineering** | Type hints, docstrings, modular architecture, 70%+ test coverage |
-| **CI/CD** | GitHub Actions — automated tests + code quality checks on every push |
-| **UI** | Interactive Streamlit app — search, similar courses, A/B test dashboard |
+- **Deep Learning / NLP** | BERT sentence embeddings via `sentence-transformers` for semantic similarity |
+- **Recommender System** | Content-based filtering using cosine similarity on 6 000+ courses |
+- **MLOps** | MLflow experiment tracking — params, metrics, artifacts logged per run |
+- **A/B Testing** | Two embedding models compared (`all-MiniLM-L6-v2` vs `all-mpnet-base-v2`) |
+- **Data Engineering** | Full EDA → cleaning → feature engineering pipeline on raw Coursera data |
+- **Software Engineering** | Type hints, docstrings, modular architecture, 70%+ test coverage |
+- **CI/CD** | GitHub Actions — automated tests + code quality checks on every push |
+- **UI** | Interactive Streamlit app — search, similar courses, A/B test dashboard |
 
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -64,11 +63,13 @@ cp .env.example .env
 
 ### 3. Place the dataset
 
-Download `CourseraDataset-Unclean.csv` from Kaggle and place it at:
+Download `CourseraDataset-Unclean.csv` from Kaggle and place it at: 
 
 ```
 data/raw/CourseraDataset-Unclean.csv
 ```
+
+- Dataset: [Coursera Dataset — Kaggle](https://www.kaggle.com/datasets/elvinrustam/coursera-dataset) by Elvin Rustam
 
 ### 4. Train both models
 
@@ -201,22 +202,3 @@ uv run isort src/ tests/ app.py          # sort imports
 uv run ruff check src/ tests/ app.py     # lint
 uv run mypy src/                         # type check
 ```
-
----
-
-## 🚢 Deployment — Streamlit Cloud
-
-1. Push the repo to GitHub (make sure `models/` and `data/processed/` are committed or regenerated on startup)
-2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub
-3. **New app** → select repo → branch `main` → main file `app.py`
-4. Deploy — Streamlit Cloud installs `requirements.txt` automatically
-
-> **Note:** Model files are ~14 MB (Variant A) and ~24 MB (Variant B) — small enough to commit directly to the repo.
-
----
-
-## 🙏 Acknowledgments
-
-- Dataset: [Coursera Dataset — Kaggle](https://www.kaggle.com/datasets/elvinrustam/coursera-dataset) by Elvin Rustam
-- Embeddings: [sentence-transformers](https://www.sbert.net/) by UKP Lab
-- Experiment tracking: [MLflow](https://mlflow.org/) by Databricks
